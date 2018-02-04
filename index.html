@@ -2,27 +2,65 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/core.css">
-		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+		<link rel="icon" href="icon/favicon.png">
 		<title>WarZone</title>
 	</head>
 
-	<body>
-		<div class="screen">
-		  	<div class="glitch">
-		    	<div class="text">
-		      		<span data-time="Welcome to the WarZone">Welcome to the WarZone</span>
-		    	</div>
-		  	</div>
-		  	<div class="logo"></div>
-		  	<div class="glitch">
-		    <div class="text">
-		      	<span class="time" data-time=""></span>
-		    </div>
-		</div>
-	</div>
+	<body>		
+		<div class="globalContainer">
+			<div class="tvContainer">
+			    <div class="introContainer">
+			      <canvas id="js_canvas" class="intro_canvas"></canvas>
+			    </div>
+			</div>
 
-	<script type='text/javascript' src="lib/jquery-3.1.1.min.js"></script>
-	<script type='text/javascript' src="js/controller.js"></script>
+			<div id="js_contentContainer" class="contentContainer">
+				<div id="js_headerContainer" class="headerContainer">
+					<div id="js_burger" class="header_burger"></div>
+					<div class="header_logo"></div>	
+					<div class="header_separator"></div>	    
+				</div>
+
+				<div id="js_menu" class="menuContainer">
+					<div id="js_mysect1" class="js_menu_item menu_item"><div class="menu_item-effect menu_item-effect--active"></div>Concept</div>
+				    <div id="js_mysect2" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Realisation</div>
+				    <div id="js_mysect3" class="js_menu_item menu_item"><div class="menu_item-effect"></div>XXX</div>
+				    <div id="js_mysect4" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Contact</div>
+				</div>
+
+				<div id="js_sectionsContainer" class="sectionsContainer">
+					<section id="mysect1">
+						<div class="messageContainer">
+				        	<div class="message_text">
+				          		<div class="message_mask">
+				            		<div class="message_writter"></div>
+				        		</div>
+				          		Welcome to the WarZone, here you have your full custom website administrator.
+				          	</div>
+				        </div>
+				      	<div class="conceptContainer">
+              				<p>Hello, my name is Romain but I'm used to be called War by my friends. I'm full stack Web developper but my real passion is the front end and graphical developpement.</p>
+							<p>I would like to be an interior designer and I would have been very passionate about it. But my passion for the computed sciences was too huge and I finally went to this way. However I realized that design a website is not so far from design a flat. You have your personal stuff, and you need to have the feeling of well-being and safty.</p>
+							<p>That's why I thought about going by my own and offer a real custom experience for my customers. A real mix between efficiency, creativity and viewing pleasure. Here, you are in my world - called the War Zone. You could find on this website a little piece of my expertise and what I'm able to create and produce.</p>
+      					</div>
+					</section>
+					<section id="mysect2">
+						<h1>SECTION 2</h1>
+					</section>
+					<section id="mysect3">
+						<h1>SECTION 3</h1>
+					</section>
+					<section id="mysect4">
+						<h1>SECTION 4</h1>
+					</section>
+				</div>
+			</div>
+		</div>
+		
+		<script type='text/javascript' src="lib/jquery.min.js"></script>
+		<script type='text/javascript' src="js/mainController.js"></script>
 	</body>
 </html>
