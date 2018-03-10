@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/core.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="icon" href="icon/favicon.png">
 		<title>WarZone</title>
 	</head>
@@ -19,16 +20,20 @@
 
 			<div id="js_contentContainer" class="contentContainer">
 				<div id="js_headerContainer" class="headerContainer">
-					<div id="js_burger" class="header_burger"></div>
+					<div id="js_burger" class="header_burger">
+						<i class="material-icons icon-burger">menu</i>
+					</div>
 					<div class="header_logo"></div>	
 					<div class="header_separator"></div>	    
 				</div>
 
 				<div id="js_menu" class="menuContainer">
-					<div id="js_mysect1" class="js_menu_item menu_item"><div class="menu_item-effect menu_item-effect--active"></div>Concept</div>
-				    <div id="js_mysect2" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Realisation</div>
-				    <div id="js_mysect3" class="js_menu_item menu_item"><div class="menu_item-effect"></div>XXX</div>
-				    <div id="js_mysect4" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Contact</div>
+					<div id="js_mysect1" class="js_menu_item menu_item"><div class="menu_item-effect menu_item-effect--active"></div>Introduction</div>
+				    <div id="js_mysect2" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Responsive design</div>
+				    <div id="js_mysect3" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Realisations</div>
+				    <div id="js_mysect4" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Technologies used</div>
+				    <div id="js_mysect5" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Sandbox</div>
+				    <div id="js_mysect6" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Contact</div>
 				</div>
 
 				<div id="js_sectionsContainer" class="sectionsContainer">
@@ -38,29 +43,92 @@
 				          		<div class="message_mask">
 				            		<div class="message_writter"></div>
 				        		</div>
-				          		Welcome to the WarZone, here you have your full custom website administrator.
+				          		<h1>Welcome to the WarZone, here you have your full custom website administrator.</h1>
 				          	</div>
 				        </div>
-				      	<div class="conceptContainer">
-              				<p>Hello, my name is Romain but I'm used to be called War by my friends. I'm full stack Web developper but my real passion is the front end and graphical developpement.</p>
-							<p>I would like to be an interior designer and I would have been very passionate about it. But my passion for the computed sciences was too huge and I finally went to this way. However I realized that design a website is not so far from design a flat. You have your personal stuff, and you need to have the feeling of well-being and safty.</p>
-							<p>That's why I thought about going by my own and offer a real custom experience for my customers. A real mix between efficiency, creativity and viewing pleasure. Here, you are in my world - called the War Zone. You could find on this website a little piece of my expertise and what I'm able to create and produce.</p>
+				      	<div class="conceptContainer section-text">
+				      		<p>Hello, here you are in my world - called the War Zone. You could find on this website a little piece of my expertise and what I'm able to create and produce.</p>
+              				<p>My name is Romain but I'm used to be called War by my friends. I'm full stack Web developper but my real passion is the front end and graphical developpement.</p>
+							<p>That's why I thought about going by my own and offer a real custom experience for my customers. A real mix between efficiency, creativity and viewing pleasure.</p>							
       					</div>
 					</section>
+					
+					<div class="separator separator_1"></div>
+
 					<section id="mysect2">
-						<h1>SECTION 2</h1>
+						<div class="responsiveContainer">
+							<h1 class="section-title">Full responsive design</h1>
+							<div class="responsive--desktop responsive_desktop scrollme">
+						      	<div 	
+						      		class="responsive_tablet responsive_animation animateme"
+					          		data-when="enter"
+						          	data-from="0.6"
+						          	data-to="0"
+						          	data-opacity="0"
+						          	data-easing="easeinout"
+						          	data-translatex="-200">
+						      	</div>
+						      	<div 
+						        	class="responsive_mobile responsive_animation animateme"
+									data-when="enter"
+									data-from="0.6"
+									data-to="0"
+									data-opacity="0"
+									data-easing="easeinout"
+									data-translatex="200">
+						      	</div>
+						    </div>
+						    <div class="responsive--mobile">
+						    	<div class="responsive_devices"></div>
+						    </div>
+						    <div class="responsive_text section-text">
+	              				Our world is every time in movement, that's why we have to visit websites created for our needs. For an usage on every devices with the same quality of rendering. Please resize or use it on some different devices to check.
+      						</div>
+						</div>
 					</section>
+
+					<div class="separator separator_2"></div>
+
 					<section id="mysect3">
-						<h1>SECTION 3</h1>
+						<div class="exemplesContainer">
+							<h1 class="section-title">Examples</h1>
+							<div class="exemple_container section-text">
+							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+						    	<button id="js_buttonMore_0" class="exemple_button">More</button>
+						  	</div>
+						  	<div id="js_exempleMore_0" class="exemple_more section-text">
+							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+							</div>
+							  						      
+							<div class="exemple_container section-text">
+							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+							    <button id="js_buttonMore_1" class="exemple_button">More</button>
+							</div>  
+							<div id="js_exempleMore_1" class="exemple_more section-text">
+							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+							</div>
+
+							<div class="exemple_container section-text">
+							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+						    	<button id="js_buttonMore_2" class="exemple_button">More</button>
+						  	</div>
+						  	<div id="js_exempleMore_2" class="exemple_more section-text">
+							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+							</div>
+						</div>
 					</section>
+
+					<div class="separator separator_3"></div>
+
 					<section id="mysect4">
-						<h1>SECTION 4</h1>
+						<h1 class="section-title">Test</h1>
 					</section>
 				</div>
 			</div>
 		</div>
 		
 		<script type='text/javascript' src="lib/jquery.min.js"></script>
+		<script type='text/javascript' src="lib/scrollme.js"></script>
 		<script type='text/javascript' src="js/mainController.js"></script>
 	</body>
 </html>

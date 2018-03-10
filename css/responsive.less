@@ -1,0 +1,68 @@
+.responsive {
+	&Container {
+		opacity: 0;
+		animation: displayOpacity 1s @responsiveAnimationDelay forwards;
+	}
+
+	&--desktop {
+		display: none;
+	}
+
+	&_devices {
+		position: relative;
+		width: 100%;
+		height: 200px;
+		margin: auto;
+		background-image: url("./../image/devices.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+@media screen and (min-width: 1025px) {   
+	.responsive {
+
+		&--desktop {
+			display: block;
+		}
+		
+		&--mobile {
+			display: none;
+		}
+
+		&_desktop {
+			position: relative;
+			width: 435px;
+	    	height: 250px;
+	    	margin: auto;
+	    	margin-bottom: 120px;
+	    	background-image: url("./../image/desktop.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		&_animation {
+			position: absolute;
+			top: 80px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		&_tablet {
+			left: -150px;
+	    	width: 365px;
+	    	height: 250px;
+	    	background-image: url("./../image/tablet.png");
+		}
+
+		&_mobile {
+			right: -60px;
+	    	width: 166px;
+	    	height: 250px;
+	    	background-image: url("./../image/mobile.png");
+		}
+	}
+}

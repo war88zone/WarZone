@@ -1,0 +1,60 @@
+.menu {
+	&Container {
+		position: fixed;
+		top: @headerHeight_mobile;
+		left: 0;
+		width: @menuWidth;
+		height: 100%;
+		background-color: black;
+		color: white;
+		letter-spacing: 2px;
+		padding-top: 1rem;
+		transform: translate(-100%);
+		transition: transform 0.5s ease-in-out;
+		z-index: 2;
+	}
+
+	&--visible {
+		transform: translate(0);
+	}
+
+	&_item {
+		position: relative;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		padding: @itemPadding;
+		cursor: pointer;
+		transition: color .3s ease-in-out;
+	}
+
+	&_item:before {
+		content: ">_";
+	}
+
+	&_item:hover {
+		color: @colorRed;
+	}
+
+	&_item-effect {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 0;
+		height: 2px;
+		background-color: @colorRed;
+		transition: width .3s ease-in-out;
+
+		&--active {
+			width: ~"calc(100% - @{itemPadding})";
+		}    
+	} 
+}
+
+@media screen and (min-width: 1025px) {   
+	.menuContainer {
+		position: fixed;
+		top: @headerHeight_desktop;
+		transform: translate(0);
+	}
+}

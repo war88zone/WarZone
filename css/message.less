@@ -1,0 +1,48 @@
+.message {
+	&Container {
+		position: relative;
+		text-align: center;
+		overflow: hidden;
+		opacity: 0;
+		animation: displayOpacity 1s @messageAnimationDelay forwards;
+	}
+
+	&_text {
+		position: relative;
+		margin-bottom: @paddingSections-vertical;
+		display: inline-block;
+	}
+}
+
+@media screen and (min-width: 1025px) {   
+	.message {  
+		&Container {
+			opacity: 1;
+		}
+
+		&_text {
+			letter-spacing: 2px;
+			animation: none;
+		}
+
+		&_mask {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			transition: left 1s ease-in-out;
+			animation: translateMask 2s 2s forwards;
+		}
+
+		&_writter {
+			position: absolute;
+			height: 100%;
+			width: 3px;
+			background-color: @colorRed;
+			animation: pulse 1s forwards;
+			animation-iteration-count: 6;
+		}
+	}
+}

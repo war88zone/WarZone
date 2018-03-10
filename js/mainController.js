@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+  $("html, body").animate({
+      scrollTop: 0
+    }, 600 );
+
   $("#js_burger").click(function(){
     $("#js_menu").addClass("menu--visible");
   });
@@ -16,8 +21,32 @@ $(document).ready(function() {
     }, 600 );
   });
 
+  $(".exemple_button").click((event)=>{
+    let tabId = event.target.id.split("_");
+    const currentId = tabId[tabId.length - 1];
+    $("#js_exempleMore_"+currentId).slideToggle();
+    $(event.target).toggleClass("exemple_button--active"); 
+  });
+
+  let getUrlParameter = function(sParam) {
+    let sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+      sParameterName = sURLVariables[i].split('=');
+
+      if (sParameterName[0] === sParam) {
+        return sParameterName[1] === undefined ? true : sParameterName[1];
+      }
+    }
+  };
+
   //------------------------------------------- ANIMATION INTRO -------------------------------------------//
-  var canvas = document.getElementById('js_canvas')
+  let introActivated = true;
+
+  let canvas = document.getElementById('js_canvas')
     , context = canvas.getContext('2d')
     , img = new Image()
     , w
@@ -27,10 +56,12 @@ $(document).ready(function() {
 
   img.src = './image/logo_beforeGlitch--white.svg';
   img.onload = function() {
-    init();
+    if(introActivated){
+      init();
+    }
   };
 
-  var init = function() {
+  let init = function() {
     clearInterval(glitchInterval);
     canvas.width = w = img.width;
     canvas.height = h = img.height;
@@ -41,30 +72,35 @@ $(document).ready(function() {
     }, 500);
   };
 
-  var clear = function() {
+  let clear = function() {
     context.rect(0, 0, w, h);
     context.fillStyle = 'black';
     context.fill();
   };
       
-  var glitchImg = function() {
-    for (var i = 0; i < randInt(1, 13); i++) {
-      var x = Math.random() * w;
-      var y = Math.random() * h;
-      var spliceWidth = w - x;
-      var spliceHeight = randInt(5, h / 3);
+  let glitchImg = function() {
+    for (let i = 0; i < randInt(1, 13); i++) {
+      let x = Math.random() * w;
+      let y = Math.random() * h;
+      let spliceWidth = w - x;
+      let spliceHeight = randInt(5, h / 3);
       context.drawImage(canvas, 0, y, spliceWidth, spliceHeight, x, y, spliceWidth, spliceHeight);
       context.drawImage(canvas, spliceWidth, y, x, spliceHeight, 0, y, x, spliceHeight);
     }
   };
 
-  var randInt = function(a, b) {
+  let randInt = function(a, b) {
     return ~~(Math.random() * (b - a) + a);
   };
 
-  // After intro
-  setTimeout(function(){
-    clearInterval(glitchInterval);
-    $("#js_contentContainer").delay(250).fadeIn("slow");
-  }, 3000);
+  if(introActivated){
+    // After intro
+    setTimeout(function(){
+      clearInterval(glitchInterval);
+      $("#js_contentContainer").delay(250).fadeIn("slow");
+    }, 4000);
+  }
+  else{
+    $("#js_contentContainer").fadeIn("slow");
+  }
 });

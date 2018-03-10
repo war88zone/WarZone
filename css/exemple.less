@@ -1,0 +1,68 @@
+.exemplesContainer {
+	opacity: 0;
+	animation: displayOpacity 1s @exempleAnimationDelay forwards;
+}
+
+.exemple {
+	&_container {
+		position: relative;
+		width: 100%;
+		height: auto;
+		padding: 2rem;
+		padding-bottom: 90px;
+		background-color: white;
+		box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px 0;
+	}
+
+	&_button {
+		position: absolute;
+		bottom: 15px;
+		right: 20px;
+		border: none;
+		box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px 0;
+		border-radius: 2px;
+		background-color: white;
+		padding: .5rem 2rem;
+		cursor: pointer;
+		transition: color .3s ease-in-out, background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+		&:focus {
+			outline:0;
+		}
+
+		&:active {
+			outline:0;
+			box-shadow: rgba(0, 0, 0, 0.8) 0 1px 8px 0;
+		}
+
+		&--active {
+			color: #ff3030;
+		}
+	}
+
+	&_more {
+		display: none;
+		width: 99%;
+		height: auto;
+		margin: auto;
+		padding: 2rem;
+		color: white;
+		background-color: black;
+		z-index: 1;   
+
+	}
+}
+
+@media screen and (min-width: 1025px) {   
+	.exemple {
+		&_button {
+			position: absolute;
+			bottom: 25px;
+			right: 50px;
+
+			&:hover {
+				color: #ff3030;
+			}
+		}
+	}
+}
