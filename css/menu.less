@@ -43,7 +43,6 @@
 		width: 0;
 		height: 2px;
 		background-color: @colorRed;
-		transition: width .3s ease-in-out;
 
 		&--active {
 			width: ~"calc(100% - @{itemPadding})";
@@ -52,9 +51,15 @@
 }
 
 @media screen and (min-width: 1025px) {   
-	.menuContainer {
-		position: fixed;
-		top: @headerHeight_desktop;
-		transform: translate(0);
+	.menu {
+		&Container {
+			position: fixed;
+			top: @headerHeight_desktop;
+			transform: translate(0);
+		}
+
+		&_item-effect {
+			transition: width .3s ease-in-out;
+		}
 	}
 }
