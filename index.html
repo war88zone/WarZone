@@ -13,15 +13,17 @@
 	<body>		
 		<div class="globalContainer">
 			<div class="tvContainer">
-			    <div class="introContainer">
-			      <canvas id="js_canvas" class="intro_canvas"></canvas>
-			    </div>
+				<div class="introContainer">
+					<canvas id="js_canvas" class="intro_canvas"></canvas>
+				</div>
 			</div>
 
 			<div id="js_contentContainer" class="contentContainer">
 				<div id="js_headerContainer" class="headerContainer">
 					<div id="js_burger" class="header_burger">
-						<i class="material-icons icon-burger">menu</i>
+						<div class="header_burger-line header_burger-top"></div>
+						<div class="header_burger-line header_burger-middle"></div>
+						<div class="header_burger-line header_burger-bottom"></div>
 					</div>
 					<div class="header_logo"></div>	
 					<div class="header_separator"></div>	    
@@ -29,61 +31,60 @@
 
 				<div id="js_menu" class="menuContainer">
 					<div id="js_mysect1" class="js_menu_item menu_item"><div class="menu_item-effect menu_item-effect--active"></div>Introduction</div>
-				    <div id="js_mysect2" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Responsive design</div>
-				    <div id="js_mysect3" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Realisations</div>
-				    <div id="js_mysect4" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Technologies used</div>
-				    <div id="js_mysect5" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Sandbox</div>
-				    <div id="js_mysect6" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Contact</div>
+					<div id="js_mysect2" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Responsive design</div>
+					<div id="js_mysect3" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Realisations</div>
+					<div id="js_mysect4" class="js_menu_item menu_item"><div class="menu_item-effect"></div>Process</div>
+				</div>
+
+				<div class="global_mask">
 				</div>
 
 				<div id="js_sectionsContainer" class="sectionsContainer">
 					<section id="mysect1">
 						<div class="messageContainer">
-				        	<div class="message_text">
-				          		<div class="message_mask">
-				            		<div class="message_writter"></div>
-				        		</div>
-				          		<h1>Welcome to the WarZone, here you have your full custom website administrator.</h1>
-				          	</div>
-				        </div>
-				      	<div class="conceptContainer section-text">
-				      		<p>Hello, here you are in my world - called the War Zone. You could find on this website a little piece of my expertise and what I'm able to create and produce.</p>
-              				<p>My name is Romain but I'm used to be called War by my friends. I'm full stack Web developper but my real passion is the front end and graphical developpement.</p>
+							<div class="message_text">
+								<div class="message_mask">
+									<div class="message_writter"></div>
+								</div>
+								<h1>Welcome to the WarZone, here you have your full custom website administrator.</h1>
+							</div>
+						</div>
+						<div class="conceptContainer section_text">
+							<p>Hello, here you are in my world - called the War Zone. You could find on this website a little piece of my expertise and what I'm able to create and produce.</p>
+							<p>My name is Romain but I'm used to be called War by my friends. I'm full stack Web developper but my real passion is the front end and graphical developpement.</p>
 							<p>That's why I thought about going by my own and offer a real custom experience for my customers. A real mix between efficiency, creativity and viewing pleasure.</p>							
-      					</div>
+						</div>
 					</section>
-					
+
 					<div class="separator separator_1"></div>
 
 					<section id="mysect2">
 						<div class="responsiveContainer">
-							<h1 class="section-title">Full responsive design</h1>
+							<h1 class="section_title">Full responsive design</h1>
 							<div class="responsive--desktop responsive_desktop scrollme">
-						      	<div 	
-						      		class="responsive_tablet responsive_animation animateme"
-					          		data-when="enter"
-						          	data-from="0.6"
-						          	data-to="0"
-						          	data-opacity="0"
-						          	data-easing="easeinout"
-						          	data-translatex="-200">
-						      	</div>
-						      	<div 
-						        	class="responsive_mobile responsive_animation animateme"
-									data-when="enter"
-									data-from="0.6"
-									data-to="0"
-									data-opacity="0"
-									data-easing="easeinout"
-									data-translatex="200">
-						      	</div>
-						    </div>
-						    <div class="responsive--mobile">
-						    	<div class="responsive_devices"></div>
-						    </div>
-						    <div class="responsive_text section-text">
-	              				Our world is every time in movement, that's why we have to visit websites created for our needs. For an usage on every devices with the same quality of rendering. Please resize or use it on some different devices to check.
-      						</div>
+								<div 	class="responsive_tablet responsive_animation animateme"
+										data-when="enter"
+										data-from="0.6"
+										data-to="0"
+										data-opacity="0"
+										data-easing="easeinout"
+										data-translatex="-200">
+								</div>
+								<div 	class="responsive_mobile responsive_animation animateme"
+										data-when="enter"
+										data-from="0.6"
+										data-to="0"
+										data-opacity="0"
+										data-easing="easeinout"
+										data-translatex="200">
+								</div>
+							</div>
+							<div class="responsive--mobile">
+								<div class="responsive_devices"></div>
+							</div>
+							<div class="responsive_text section_text">
+								Our world is every time in movement, that's why we have to visit websites created for our needs. For an usage on every devices with the same quality of rendering. Please resize or use it on some different devices to check.
+							</div>
 						</div>
 					</section>
 
@@ -91,29 +92,29 @@
 
 					<section id="mysect3">
 						<div class="exemplesContainer">
-							<h1 class="section-title">Examples</h1>
-							<div class="exemple_container section-text">
-							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-						    	<button id="js_buttonMore_0" class="exemple_button">More</button>
-						  	</div>
-						  	<div id="js_exempleMore_0" class="exemple_more section-text">
-							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+							<h1 class="section_title">Examples</h1>
+							<div class="exemples_mainText section_text">
+								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+								<button id="js_buttonMore_0" class="exemples_button">More</button>
 							</div>
-							  						      
-							<div class="exemple_container section-text">
-							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-							    <button id="js_buttonMore_1" class="exemple_button">More</button>
-							</div>  
-							<div id="js_exempleMore_1" class="exemple_more section-text">
-							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+							<div id="js_exemplesMore_0" class="exemples_more section_text">
+								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 							</div>
 
-							<div class="exemple_container section-text">
-							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-						    	<button id="js_buttonMore_2" class="exemple_button">More</button>
-						  	</div>
-						  	<div id="js_exempleMore_2" class="exemple_more section-text">
-							    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+							<div class="exemples_mainText section_text">
+								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+								<button id="js_buttonMore_1" class="exemples_button">More</button>
+							</div>  
+							<div id="js_exemplesMore_1" class="exemples_more section_text">
+								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+							</div>
+
+							<div class="exemples_mainText section_text">
+								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+								<button id="js_buttonMore_2" class="exemples_button">More</button>
+							</div>
+							<div id="js_exemplesMore_2" class="exemples_more section_text">
+								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 							</div>
 						</div>
 					</section>
@@ -121,12 +122,39 @@
 					<div class="separator separator_3"></div>
 
 					<section id="mysect4">
-						<h1 class="section-title">Test</h1>
+						<h1 class="section_title">Process</h1>
+						<div class="processContainer">
+							<div class="process_icons">
+								<div id="js_production" class="process_icon-container process_icon-container--active">
+									<i class="material-icons process_icon">extension</i>
+									<div class="process_text">Production</div>
+								</div>
+								<div id="js_realisation" class="process_icon-container">
+									<i class="material-icons process_icon">important_devices</i>
+									<div class="process_text">Realisation</div>
+								</div>
+								<div id="js_customer" class="process_icon-container">
+									<i class="material-icons process_icon">record_voice_over</i>
+									<div class="process_text">Customer care</div>
+								</div>
+							</div>
+							<div class="process_descriptions">
+								<div class="process_description process_description-production section_text">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+								</div>
+								<div class="process_description process_description-realisation section_text">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+								</div>
+								<div class="process_description process_description-customer section_text">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+								</div>
+							</div>
+						</div>
 					</section>
 				</div>
 			</div>
 		</div>
-		
+
 		<script type='text/javascript' src="lib/jquery.min.js"></script>
 		<script type='text/javascript' src="lib/scrollme.js"></script>
 		<script type='text/javascript' src="js/mainController.js"></script>

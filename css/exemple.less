@@ -1,10 +1,13 @@
-.exemplesContainer {
-	opacity: 0;
-	animation: displayOpacity 1s @exempleAnimationDelay forwards;
-}
+@button-position-bottom: ~"calc( 15px + (25 - 15) * (100vw - 320px) / (1920 - 320))";
+@button-position-right: ~"calc( 20px + (50 - 20) * (100vw - 320px) / (1920 - 320))";
 
-.exemple {
-	&_container {
+.exemples{
+	&Container {
+		opacity: 0;
+		animation: displayOpacity 1s @exempleAnimationDelay forwards;
+	}
+	
+	&_mainText {
 		position: relative;
 		width: 100%;
 		height: auto;
@@ -16,8 +19,8 @@
 
 	&_button {
 		position: absolute;
-		bottom: 15px;
-		right: 20px;
+		bottom: @button-position-bottom;
+		right: @button-position-right;
 		border: none;
 		box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px 0;
 		border-radius: 2px;
@@ -54,15 +57,7 @@
 }
 
 @media screen and (min-width: 1025px) {   
-	.exemple {
-		&_button {
-			position: absolute;
-			bottom: 25px;
-			right: 50px;
-
-			&:hover {
-				color: #ff3030;
-			}
-		}
+	.exemples_button:hover {
+		color: #ff3030;
 	}
 }

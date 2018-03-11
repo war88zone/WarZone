@@ -1,3 +1,6 @@
+@width-logo: ~"calc( 400px + (700 - 400) * (100vw - 320px) / (1920 - 320))";
+@height-logo: ~"calc( 70px + (150 - 70) * (100vw - 320px) / (1920 - 320))";
+
 .tvContainer {
 	position: absolute;
 	top: 0;
@@ -33,25 +36,7 @@
 	}
 
 	&_canvas {
-		width: 280px;
-		height: 70px;
-	}
-}
-
-@media screen and (min-width: 768px) {   
-	.intro {
-		&_canvas {
-			width: 400px;
-			height: 100px;
-		}
-	}
-}
-
-@media screen and (min-width: 1025px) {   
-	.intro {
-		&_canvas {
-			width: 700px;
-			height: 150px;
-		}
+		width: @width-logo;
+		height: @height-logo;
 	}
 }

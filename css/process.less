@@ -1,0 +1,57 @@
+@fontSize-icon: ~"calc( 60px + (80 - 60) * (100vw - 320px) / (1920 - 320))";
+@margin-icon-horizontal: ~"calc( 24px + (48 - 24) * (100vw - 320px) / (1920 - 320))";
+@margin-icons-vertical: ~"calc( 0px + (48 - 0) * (100vw - 320px) / (1920 - 320))";
+
+.process{
+	&Container {
+		margin: auto;
+		opacity: 0;
+		animation: displayOpacity 1s @processAnimationDelay forwards;
+	}
+
+	&_icons {
+		margin: @margin-icons-vertical 0;
+		text-align: center;
+	}
+
+	&_icon-container {
+		display: inline-block;
+		text-align: center;
+		margin: 0 @margin-icon-horizontal;
+		transition: transform .3s ease-in-out;
+		cursor: pointer;
+		color: #b3b3b3;
+
+		&--active {
+			color: #131313;
+		}
+	}
+
+	&_text {
+		display: none;
+	}
+
+	&_description-realisation, &_description-customer {
+		display: none;
+	}
+}
+
+.material-icons.process_icon {
+	font-size: @fontSize-icon;
+	margin: auto;
+	transition: color .3s ease-in-out;
+}
+
+
+@media screen and (min-width: 1025px) { 
+	.process{
+		&_icon-container:hover {
+			color: #ff3030;
+		}
+
+		&_text {
+			display: block;
+			font-size: 20px;
+		}
+	}
+}

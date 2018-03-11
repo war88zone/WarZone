@@ -1,5 +1,7 @@
-.header{
-	&Container{
+@delayAnimation: 0.3s;
+
+.header {
+	&Container {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -8,7 +10,7 @@
 		height: @headerHeight_mobile;
 		background-color: black;
 		box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.4);
-		z-index: 3;
+		z-index: 5;
 		align-items: center;
 		justify-content: center;
 	}
@@ -16,6 +18,51 @@
 	&_burger {
 		position: absolute;
 		left: 25px;
+		width: 40px;
+    	height: 40px;
+		cursor: pointer;
+
+		&-line {
+			width: 20px;
+			height: 2px;
+			background-color: white;
+			border-radius: 5px;
+			transition: opacity @delayAnimation linear;
+			opacity: 1;
+			position: absolute;
+			margin-top: 19px;
+			margin-left: 3px;
+		}
+
+		&-top {
+			margin-top: 13px;
+			transition: transform @delayAnimation ease-in-out, 
+			margin-top @delayAnimation @delayAnimation ease-in-out;
+		}
+
+		&-bottom {
+			margin-top: 25px;
+			transition: transform @delayAnimation ease-in-out, 
+			margin-top @delayAnimation @delayAnimation ease-in-out;
+		}
+	}
+
+	&_burger--opened { 
+		.header_burger-middle {
+			opacity: 0;
+		}
+
+		.header_burger-top {
+			margin-top: 19px;
+			transform: rotate(45deg);
+			transition: margin-top @delayAnimation ease-in-out, transform @delayAnimation @delayAnimation ease-in-out;
+		}
+
+		.header_burger-bottom {
+			margin-top: 19px;
+			transform: rotate(-45deg);
+			transition: margin-top @delayAnimation ease-in-out, transform @delayAnimation @delayAnimation ease-in-out;
+		}
 	}
 
 	&_logo {

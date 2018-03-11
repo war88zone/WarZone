@@ -1,15 +1,21 @@
 $(document).ready(function() {
 
   $("html, body").animate({
-      scrollTop: 0
-    }, 600 );
+    scrollTop: 0
+  }, 600 );
 
   $("#js_burger").click(function(){
-    $("#js_menu").addClass("menu--visible");
+    $("#js_menu").toggleClass("menu--visible");
+    $(".header_burger").toggleClass("header_burger--opened");
+    $(".global_mask").toggleClass("global_mask--visible");
+    $("html").toggleClass("scrollLocked");
   });
 
   $("#js_menu").click(function(){
     $("#js_menu").removeClass("menu--visible");
+    $(".header_burger").removeClass("header_burger--opened");
+    $(".global_mask").removeClass("global_mask--visible");
+    $("html").removeClass("scrollLocked");
   });
 
   $(".js_menu_item").click(function(){
@@ -21,18 +27,22 @@ $(document).ready(function() {
     }, 600 );
   });
 
-  $(".exemple_button").click((event)=>{
+  $(".global_mask").click((event)=>{
+    return false;
+  });
+
+  $(".exemples_button").click((event)=>{
     let tabId = event.target.id.split("_");
     const currentId = tabId[tabId.length - 1];
-    $("#js_exempleMore_"+currentId).slideToggle();
-    $(event.target).toggleClass("exemple_button--active"); 
+    $("#js_exemplesMore_"+currentId).slideToggle();
+    $(event.target).toggleClass("exemples_button--active"); 
   });
 
   let getUrlParameter = function(sParam) {
     let sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
+    sURLVariables = sPageURL.split('&'),
+    sParameterName,
+    i;
 
     for (i = 0; i < sURLVariables.length; i++) {
       sParameterName = sURLVariables[i].split('=');
@@ -43,16 +53,30 @@ $(document).ready(function() {
     }
   };
 
+  let oldId = "production";
+
+  $(".process_icon-container").click(function(){
+    $(".process_icon-container").removeClass("process_icon-container--active");
+    $(this).addClass("process_icon-container--active");
+    var id = $(this).attr('id').split("js_")[1];
+    if(oldId != id){
+      $(".process_description-"+oldId).fadeOut(function(){
+        $(".process_description-"+id).fadeIn();
+      });
+      oldId = id;
+    }
+  });
+
   //------------------------------------------- ANIMATION INTRO -------------------------------------------//
   let introActivated = true;
 
   let canvas = document.getElementById('js_canvas')
-    , context = canvas.getContext('2d')
-    , img = new Image()
-    , w
-    , h
-    , offset
-    , glitchInterval;
+  , context = canvas.getContext('2d')
+  , img = new Image()
+  , w
+  , h
+  , offset
+  , glitchInterval;
 
   img.src = './image/logo_beforeGlitch--white.svg';
   img.onload = function() {
@@ -77,7 +101,7 @@ $(document).ready(function() {
     context.fillStyle = 'black';
     context.fill();
   };
-      
+
   let glitchImg = function() {
     for (let i = 0; i < randInt(1, 13); i++) {
       let x = Math.random() * w;

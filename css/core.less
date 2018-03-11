@@ -1,3 +1,7 @@
+.scrollLocked {
+	overflow: hidden;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -15,7 +19,7 @@ body {
 // Custom values
 @headerHeight_desktop: 100px;
 @headerHeight_mobile: 50px;
-@menuWidth: 250px;
+@menuWidth: 300px;
 @itemPadding: 1rem;
 @colorRed: #ff3030;
 // delays
@@ -27,30 +31,48 @@ body {
 @separator2AnimationDelay: 5s;
 @exempleAnimationDelay: 6s;
 @separator3AnimationDelay: 6s;
+@processAnimationDelay: 7s;
 // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-@font-size-big: ~"calc( 18px + (26 - 18) * (100vw - 320px) / (1920 - 320))";
-@font-weight-big: 600;
-@font-size-medium: ~"calc( 14px + (18 - 14) * (100vw - 320px) / (1920 - 320))";
+@fontSize-big: ~"calc( 18px + (26 - 18) * (100vw - 320px) / (1920 - 320))";
+@fontWeight-big: 600;
+@fontSize-medium: ~"calc( 14px + (18 - 14) * (100vw - 320px) / (1920 - 320))";
 @paddingSections-vertical: ~"calc( 32px + (80 - 32) * (100vw - 320px) / (1920 - 320))";
 @paddingSections-horizontal: ~"calc( 16px + (96 - 16) * (100vw - 320px) / (1920 - 320))";
 
 h1 {
-	font-size: @font-size-big;
-	font-weight: @font-weight-big;
+	font-size: @fontSize-big;
+	font-weight: @fontWeight-big;
 	margin: 0;
 }
 
 button {
-	font-size: @font-size-medium;
-	font-weight: @font-weight-big;
+	font-size: @fontSize-medium;
+	font-weight: @fontWeight-big;
 	margin: 0;
 }
 
 
-.globalContainer {
-	width: 100%;
-	height: 100vh;
-	font-size: @font-size-medium;
+.global{
+	&Container {
+		width: 100%;
+		height: 100vh;
+		font-size: @fontSize-medium;
+	}
+
+	&_mask {
+		display: none;
+		position: fixed;
+	    top: 50px;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0, 0, 0, 0.5);
+	    z-index: 2;
+
+	    &--visible {
+	    	display: block;
+	    }
+	}
 }
 
 .contentContainer {
@@ -69,12 +91,14 @@ button {
 	box-sizing: border-box;
 }
 
-.section-title {
-	margin-bottom: 1rem;
-}
-
-.section-text {
-	padding: 1rem;
+.section{
+	&_title {
+		margin-bottom: 1rem;
+	}
+	
+	&_text {
+		padding: 1rem;
+	}
 }
 
 .separator {
@@ -104,7 +128,7 @@ button {
 		width: ~"calc( 100% - @{menuWidth})";
 	}
 
-	.section-text {
+	.section_text {
 		padding: 0 2rem;
 	}
 }
@@ -117,3 +141,4 @@ button {
 @import "concept.less";
 @import "responsive.less";
 @import "exemple.less";
+@import "process.less";
