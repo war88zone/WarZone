@@ -22,6 +22,8 @@ body {
 @menuWidth: 250px;
 @itemPadding: 1rem;
 @colorRed: #ff3030;
+@greyLight: #a6a6a6;
+@greyDark: #252525;
 // delays
 @introAnimationDelay: 4s;
 @messageAnimationDelay: 2s;
@@ -32,6 +34,8 @@ body {
 @exempleAnimationDelay: 6s;
 @separator3AnimationDelay: 6s;
 @processAnimationDelay: 7s;
+@separator4AnimationDelay: 7s;
+@footerAnimationDelay: 8s;
 // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 @fontSize-big: ~"calc( 18px + (26 - 18) * (100vw - 320px) / (1920 - 320))";
 @fontWeight-big: 600;
@@ -86,6 +90,7 @@ button {
 	height: auto;
 	margin-top: @headerHeight_mobile;
 	padding: @paddingSections-vertical @paddingSections-horizontal;
+	padding-bottom: 1rem;
 	background-color: white;
 	float: right;
 	box-sizing: border-box;
@@ -120,6 +125,10 @@ button {
 	&_3 {
 		animation: displayOpacity 1s @separator3AnimationDelay forwards;
 	}
+
+	&_4 {
+		animation: displayOpacity 1s @separator4AnimationDelay forwards;
+	}
 }
 
 @media screen and (min-width: 1025px) {   
@@ -142,3 +151,4 @@ button {
 @import "responsive.less";
 @import "exemple.less";
 @import "process.less";
+@import "footer.less";
