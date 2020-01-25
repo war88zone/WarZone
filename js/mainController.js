@@ -1,4 +1,4 @@
-$(document).ready(function() {
+// When HTML are loaded
 
   $("html, body").animate({
     scrollTop: 0
@@ -26,6 +26,16 @@ $(document).ready(function() {
       scrollTop: ($("#"+currentId).offset().top - $("#js_headerContainer").outerHeight() - $("#js_sectionsContainer").css('padding-top').replace("px", ""))
     }, 600 );
   });
+
+  /*$(window).scroll(function() {
+    var scrollDistance = $(window).scrollTop(); 
+    $('.js_section').each(function(i) {
+      if ($(this).offset().top - $("#js_headerContainer").outerHeight() - $("#js_sectionsContainer").css('padding-top').replace("px", "") <= scrollDistance) {
+        $('.js_menu_item').find(".menu_item-effect").removeClass("menu_item-effect--active");
+        $('.js_menu_item').eq(i).find(".menu_item-effect").addClass("menu_item-effect--active");
+      }
+    });
+  }).scroll();*/
 
   $(".global_mask").click((event)=>{
     return false;
@@ -65,6 +75,10 @@ $(document).ready(function() {
       });
       oldId = id;
     }
+  });
+
+    var win = window.open('http://www.warzone.fr/cotedazurphoto', '_blank');
+    win.focus();
   });
 
   //------------------------------------------- ANIMATION INTRO -------------------------------------------//
@@ -125,6 +139,7 @@ $(document).ready(function() {
     }, 4000);
   }
   else{
+    $(".tvContainer").hide();
     $("#js_contentContainer").fadeIn("slow");
   }
 });
