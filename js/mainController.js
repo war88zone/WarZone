@@ -1,4 +1,5 @@
 // When HTML are loaded
+$.when(deferred_message, deferred_exemple, deferred_process).done(function() {
 
   $("html, body").animate({
     scrollTop: 0
@@ -77,6 +78,7 @@
     }
   });
 
+  $(".js_exempleCotedazurphoto").click(function(){
     var win = window.open('http://www.warzone.fr/cotedazurphoto', '_blank');
     win.focus();
   });
